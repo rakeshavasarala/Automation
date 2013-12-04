@@ -9,17 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>web-driver</module>
         <module>parent</module>
+        <module>web-driver</module>
         <module>cucumber</module>
     </modules>
-
-    <properties>
-      <spring.version>3.2.2.RELEASE</spring.version>
-    </properties>
-
-
-
-
 
 </project>
