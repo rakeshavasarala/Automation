@@ -1,0 +1,10 @@
+<!-- This runs all tests in parallel-->
+<suite name="RunAllSuite" verbose="1" parallel="methods" thread-count="2">
+    <test name="Run All Tests">
+        <packages>
+            <package name="com.rakesh.suite1"/>
+            <package name="com.rakesh.suite2"/>
+        </packages>
+    </test>
+</suite>
+

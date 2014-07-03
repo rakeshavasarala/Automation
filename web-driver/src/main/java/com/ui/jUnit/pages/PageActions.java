@@ -1,4 +1,4 @@
-package com.ui.pages;
+package com.ui.jUnit.pages;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

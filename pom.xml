@@ -12,6 +12,7 @@
         <module>parent</module>
         <module>web-driver</module>
         <module>cucumber</module>
+        <module>testNG</module>
     </modules>
 
 </project>

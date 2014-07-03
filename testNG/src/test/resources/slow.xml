@@ -1,0 +1,11 @@
+<!-- This runs all slow tests-->
+<suite name="SlowSuite" verbose="1">
+    <test name="Slow Tests">
+        <groups>
+            <run>
+                <include name="slow"/>
+            </run>
+        </groups>
+    </test>
+</suite>
+

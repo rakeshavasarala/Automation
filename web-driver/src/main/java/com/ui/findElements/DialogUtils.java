@@ -1,4 +1,4 @@
-package com.ui.common.findElements;
+package com.ui.findElements;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;

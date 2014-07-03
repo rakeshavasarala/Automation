@@ -1,4 +1,4 @@
-package com.ui.pages;
+package com.ui.jUnit.pages;
 
 import com.ui.Browsers;
 import com.ui.drivers.Drivers;

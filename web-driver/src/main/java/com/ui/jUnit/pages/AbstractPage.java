@@ -1,7 +1,5 @@
-package com.ui.pages;
-import org.openqa.selenium.By;
+package com.ui.jUnit.pages;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,5 +13,8 @@ public class AbstractPage {
         return driver.getRemoteWebDriver();
     }
 
+    public void navigateTo(String url) {
+        getDriver().get(url);
+    }
 
 }

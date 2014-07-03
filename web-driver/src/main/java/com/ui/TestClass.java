@@ -1,6 +1,6 @@
 package com.ui;
 
-import com.ui.pages.ConfigWebLoginPage3;
+import com.ui.jUnit.pages.ConfigWebLoginPage3;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**

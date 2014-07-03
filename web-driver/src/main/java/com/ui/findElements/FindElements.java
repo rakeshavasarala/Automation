@@ -1,4 +1,4 @@
-package com.ui.common.findElements;
+package com.ui.findElements;
 
 /**
  * Created with IntelliJ IDEA.

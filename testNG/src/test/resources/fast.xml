@@ -1,0 +1,14 @@
+<suites>
+    <suite name="FastSuite" verbose="1">
+        <test name="SimpleTest1">
+            <groups>
+                <run>
+                    <include name="fast"/>
+                </run>
+            </groups>
+            <packages>
+                <package name="com.rakesh"/>
+            </packages>
+        </test>
+    </suite>
+</suites>
