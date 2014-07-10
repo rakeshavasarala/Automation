@@ -2,13 +2,6 @@ package com.ui.jUnit.pages;
 
 import org.openqa.selenium.By;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Rakesh
- * Date: 07/12/13
- * Time: 20:58
- * To change this template use File | Settings | File Templates.
- */
 public final class ConfigWebLoginPage2 {
 
 

@@ -1,0 +1,10 @@
+<!-- This runs all tests in parallel-->
+<suite name="RunByGroupSuite" verbose="1" parallel="methods" thread-count="3">
+    <parameter name="browserName"  value="chrome"/>
+    <test name="Regression1">
+        <packages>
+            <package name="com.grid"/>
+        </packages>
+    </test>
+</suite>
+

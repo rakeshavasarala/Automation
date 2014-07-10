@@ -13,6 +13,9 @@
         <module>web-driver</module>
         <module>cucumber</module>
         <module>testNG</module>
+        <module>testNG-cucumber</module>
+        <module>selenium-grid</module>
+        <module>webdriver-common</module>
     </modules>
 
 </project>

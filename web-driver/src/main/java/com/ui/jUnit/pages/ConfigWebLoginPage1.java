@@ -3,13 +3,6 @@ package com.ui.jUnit.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Rakesh
- * Date: 07/12/13
- * Time: 20:35
- * To change this template use File | Settings | File Templates.
- */
 public class ConfigWebLoginPage1 {
 
     /**
