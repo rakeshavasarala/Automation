@@ -1,5 +1,6 @@
 package com.ui.stepDefinitions;
 
+import com.BaseStepDef;
 import com.enums.CucumberBug;
 import com.enums.EndeavourMUTypes;
 import com.enums.Member;
@@ -15,8 +16,6 @@ import cucumber.api.java.en.When;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -26,10 +25,10 @@ import java.util.Map;
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 
-@ContextConfiguration("classpath:cucumber.xml")
-@Component
+/*@ContextConfiguration("classpath:cucumber.xml")*/
+/*@Component*/
 //@Scope("cucumber-glue")
-public class ConfigWebLogin {
+public class ConfigWebLogin extends BaseStepDef {
 
     @Autowired
     private ConfigWebLoginPage3 loginPage3;
@@ -61,6 +60,18 @@ public class ConfigWebLogin {
         }
 
 
+        System.out.println(navigation.getUrl());
+        loginPage3.username().sendKeys(dataTable.asMap(String.class, String.class).keySet().iterator().next());
+        loginPage3.password().sendKeys(dataTable.asMap(String.class, String.class).values().iterator().next());
+        loginPage3.login().click();
+        sleep(5000);
+
+    }
+
+    @Given("^log out of config web$")
+    public void logOutOfConfigWeb() throws Throwable {
+        loginPage3.logout().click();
+        sleep(5000);
     }
 
     @And("^read data table as rows$")

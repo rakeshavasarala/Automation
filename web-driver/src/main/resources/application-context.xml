@@ -26,12 +26,13 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
 
-    <!--<bean id="glueCodeScopeConfigurer" class="org.springframework.beans.factory.config.CustomScopeConfigurer">
-        <property name="scopes">
-            <map>
-                <entry key="cucumber-glue" value-ref="glueCodeScope"/>
-            </map>
-        </property>
+<!--    &lt;!&ndash; Classes that need to be autowired into tests &ndash;&gt;
+    <bean id="remoteWebDriver" class="com.ui.drivers.SpringDriver">
+        <constructor-arg>
+            <value>firefox</value>
+        </constructor-arg>
     </bean>-->
+
+    <!--<bean id="abstractPage" class="com.ui.jUnit.pages.AbstractPage"></bean>-->
 
 </beans>

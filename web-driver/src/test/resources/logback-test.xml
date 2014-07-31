@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--
+    This is derived from platform logback-test.xml.
+    -->
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %c{1} [%p] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Default logging level -->
+    <root level="WARN">
+        <appender-ref ref="stdout"/>
+    </root>
+
+    <!-- Default Endeavour logging level -->
+    <logger name="com.ga.endeavour.tests" level="WARN"/>
+
+    <!-- Tone down Endeavour things that are annoying -->
+    <logger name="com.ga.endeavour.commons.security.client.ClientAccessToken" level="WARN"/>
+    <logger name="com.ga.endeavour.commons.security.handler.AuditingAccessDeniedHandler" level="ERROR"/>
+    <logger name="com.ga.endeavour.search.LocalParamsSolrQueryBuilder" level="WARN"/>
+
+    <!-- Logging levels for non-Endeavour components -->
+    <logger name="org.springframework" level="ERROR"/>
+
+    <!-- Switch off very annoying HTML unit logging, and provide easy points to switch on individual loggers -->
+    <logger name="com.gargoylesoftware.htmlunit" level="OFF"/>
+    <logger name="com.gargoylesoftware.htmlunit.DefaultCssErrorHandler" level="OFF"/>
+    <logger name="com.gargoylesoftware.htmlunit.IncorrectnessListenerImpl" level="OFF"/>
+    <logger name="com.gargoylesoftware.htmlunit.javascript.StrictErrorReporter" level="OFF"/>
+
+    <logger name="com.ga.endeavour.tests.helper.fail.EndeavourByteman" level="INFO"/>
+    <logger name="org.jboss" level="ERROR"/>
+
+</configuration>

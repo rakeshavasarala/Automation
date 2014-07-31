@@ -17,28 +17,14 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         </property>
     </bean>
 
-    <bean id="glueCodeScope" class="cucumber.runtime.java.spring.GlueCodeScope">
-    </bean>
-
-    <bean id="glueCodeScopeConfigurer" class="org.springframework.beans.factory.config.CustomScopeConfigurer">
-    <property name="scopes">
-        <map>
-            <entry key="cucumber-glue" value-ref="glueCodeScope"/>
-        </map>
-    </property>
-    </bean>
-
     <import resource="classpath:cucumber/runtime/java/spring/cucumber-glue.xml"/>
-
-    <!--<bean id="navigation" class="com.ui.stepDefinitions.Navigation" scope="cucumber-glue"/>
-    <bean id="configWebLogin" class="com.ui.stepDefinitions.ConfigWebLogin" scope="cucumber-glue"/>-->
 
     <context:component-scan base-package="com.ui"/>
 
     <!-- Classes that need to be autowired into tests -->
-    <bean id="remoteWebDriver" class="com.ui.drivers.SpringDriver">
+    <bean id="remoteWebDriver" class="com.ui.drivers.CustomWebDriver" destroy-method="close">
         <constructor-arg>
-            <value>firefox</value>
+            <value>org.openqa.selenium.firefox.FirefoxDriver</value>
         </constructor-arg>
     </bean>
 

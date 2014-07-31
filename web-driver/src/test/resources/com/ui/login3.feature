@@ -1,17 +1,33 @@
 Feature: Login Feature 3
 
+  @now
   Scenario: Scenario 1
     Given navigate to page https://endeavour-configuration-web-autonajenkins.endeavourdemo.com
     Given login to config web
+    And log out of config web
 
   @now
   Scenario: Scenario 2
-  #Given navigate to page https://endeavour-configuration-web-autonajenkins.endeavourdemo.com
+    Given navigate to page https://endeavour-configuration-web-autonajenkins.endeavourdemo.com
     And login to config web as
       | userName | password |
       | admin    | admin    |
+    And log out of config web
 
-    And read data table as rows
+  #@now
+  Scenario Outline: Scenario 3
+    Given navigate to page https://endeavour-configuration-web-autonajenkins.endeavourdemo.com
+    And login to config web as
+      | userName   | password   |
+      | <userName> | <password> |
+    And log out of config web
+  Examples:
+    | userName | password |
+    | admin    | admin    |
+    | admin    | admin    |
+
+  Scenario: Scenario 4
+    Given read data table as rows
       | salutation | firstName | lastName | dob        |
       | Mr         | Rakesh    | A        | 01-01-2000 |
 
@@ -53,4 +69,13 @@ Feature: Login Feature 3
     Given the date is 2012-03-01T06:54:12
 
     Given the calendar date is 2012-03-01T06:54:12
+
+
+  Scenario Outline: Testing users <scenario>
+    Given the users <users>
+  Examples:
+    | scenario | users           |
+    | 1        | adam, bob, john |
+    | 2        | adam, bob, john |
+
 

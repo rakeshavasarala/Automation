@@ -1,20 +1,37 @@
 package com.ui.jUnit.pages;
-import org.openqa.selenium.WebDriver;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
+import com.ui.drivers.CustomWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
+
 public class AbstractPage {
 
     @Autowired
-    private com.ui.drivers.SpringDriver driver;
+    private CustomWebDriver remoteWebDriver;
 
-    public WebDriver getDriver() {
-        return driver.getRemoteWebDriver();
+    @PostConstruct
+    public void init() {
+        System.out.println("Inside AbstractPage class, CustomWebDriver = " + remoteWebDriver);
     }
 
     public void navigateTo(String url) {
         getDriver().get(url);
+    }
+
+    public WebDriver getDriver() {
+        return remoteWebDriver.getRemoteWebDriver();
+    }
+
+    public WebElement elementById(String id) {
+        return getDriver().findElement(By.id(id));
+    }
+
+    public WebElement elementByClassName(String className) {
+        return getDriver().findElement(By.className(className));
     }
 
 }

@@ -16,6 +16,7 @@
         <module>testNG-cucumber</module>
         <module>selenium-grid</module>
         <module>webdriver-common</module>
+        <module>Spring</module>
     </modules>
 
 </project>
