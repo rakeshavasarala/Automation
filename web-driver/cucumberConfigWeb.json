@@ -1,0 +1,71 @@
+[
+  {
+    "id": "login-feature-3",
+    "description": "",
+    "name": "Login Feature 3",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 334299,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterHook(Scenario)"
+            }
+          }
+        ],
+        "id": "login-feature-3;testing-users-\u003cscenario\u003e;;2",
+        "tags": [
+          {
+            "name": "@now",
+            "line": 57
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 1453301,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeHook(Scenario)"
+            }
+          }
+        ],
+        "description": "",
+        "name": "Testing users 1",
+        "keyword": "Scenario Outline",
+        "line": 62,
+        "steps": [
+          {
+            "result": {
+              "duration": 2543129144,
+              "status": "passed"
+            },
+            "name": "the users adam, bob, john",
+            "keyword": "Given ",
+            "line": 59,
+            "match": {
+              "arguments": [
+                {
+                  "val": "adam, bob, john",
+                  "offset": 10
+                }
+              ],
+              "location": "ConfigWebLogin.givenTheUsers(String\u003e)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "com/ui/login3.feature"
+  }
+]
