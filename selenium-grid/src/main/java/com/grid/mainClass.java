@@ -14,10 +14,14 @@ public class mainClass {
 
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
 
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\UC181532\\Downloads\\chromedriver_win32\\chromedriver.exe");
+
+        System.out.println(System.getProperty("webdriver.chrome.driver"));
+
         URL hubUrl = new URL("http://localhost:4444/wd/hub");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("firefox");
-        capabilities.setPlatform(Platform.LINUX);
+        capabilities.setPlatform(Platform.WINDOWS);
         WebDriver driver = new RemoteWebDriver(hubUrl, capabilities);
 
 
@@ -28,8 +32,8 @@ public class mainClass {
         //driver.close();
 
         DesiredCapabilities capabilities1 = new DesiredCapabilities();
-        capabilities1.setBrowserName("chrome");
-        capabilities1.setPlatform(Platform.LINUX);
+        capabilities1.setBrowserName("firefox");
+        capabilities1.setPlatform(Platform.WINDOWS);
         WebDriver driver1 = new RemoteWebDriver(hubUrl, capabilities1);
 
         driver1.get(configWebUrl);

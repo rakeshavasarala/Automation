@@ -11,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -124,7 +122,7 @@ public class SpawnHubViaCode {
         return nodeConfiguration;
     }*/
 
-    @Test
+    //@Test
     public void testLocalGrid() throws MalformedURLException {
         URL remoteURL = new URL("http://" + myHub.getHost() + ":" +
                 myHub.getPort() + "/wd/hub");
@@ -139,7 +137,7 @@ public class SpawnHubViaCode {
         selenium.stop();
     }
 
-    @AfterClass
+    //@AfterClass
     public void shutDownNodeAndHub() throws Exception {
         if (remoteWebDriverNode != null) {
             remoteWebDriverNode.stopRemoteServer();
