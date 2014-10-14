@@ -18,6 +18,8 @@
         <module>webdriver-common</module>
         <module>Spring</module>
         <module>JUnit-Parallel</module>
+        <module>run-feature-parallel</module>
+        <module>test1</module>
     </modules>
 
 </project>

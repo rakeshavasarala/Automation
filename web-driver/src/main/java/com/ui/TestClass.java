@@ -15,14 +15,14 @@ public class TestClass {
     @Autowired
     private ConfigWebLoginPage3 loginPage3;
 
-    public void test3() {
+    public void test3() throws InterruptedException {
         loginPage3.username().sendKeys("admin");
         loginPage3.password().sendKeys("admin");
         loginPage3.login().click();
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new TestClass().test3();
     }
 }

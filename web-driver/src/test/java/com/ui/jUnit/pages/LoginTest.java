@@ -56,7 +56,7 @@ public class LoginTest {
     private ConfigWebLoginPage3 loginPage3;
 
     @Test
-    public void test3() {
+    public void test3() throws InterruptedException {
         loginPage3.username().sendKeys("admin");
         loginPage3.password().sendKeys("admin");
         loginPage3.login().click();

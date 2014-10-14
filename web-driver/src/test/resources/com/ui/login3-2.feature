@@ -4,6 +4,7 @@ Feature: Login Feature 3
   Background:
     Given navigate to page https://endeavour-configuration-web-autonajenkins.endeavourdemo.com
 
+  @now
   Scenario: Scenario 1
     Given login to config web
     And log out of config web

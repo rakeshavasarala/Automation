@@ -27,12 +27,12 @@ http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
 
 <!--    &lt;!&ndash; Classes that need to be autowired into tests &ndash;&gt;
-    <bean id="remoteWebDriver" class="com.ui.drivers.SpringDriver">
+    <bean id="remoteWebDriver" class="com.com.com.drivers.SpringDriver">
         <constructor-arg>
             <value>firefox</value>
         </constructor-arg>
     </bean>-->
 
-    <!--<bean id="abstractPage" class="com.ui.jUnit.pages.AbstractPage"></bean>-->
+    <!--<bean id="abstractPage" class="com.com.com.jUnit.pages.AbstractPage"></bean>-->
 
 </beans>

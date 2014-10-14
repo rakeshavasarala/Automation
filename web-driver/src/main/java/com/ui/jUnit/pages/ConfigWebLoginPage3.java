@@ -16,8 +16,10 @@ public class ConfigWebLoginPage3 extends AbstractPage {
         return elementById("dummypassword");
     }
 
-    public WebElement login() {
-        return elementById("login");
+    public WebElement login() throws InterruptedException {
+        getDriver().manage().window().maximize();
+        Thread.sleep(1000);
+        return elementById("submit");
     }
 
     public WebElement logout() {
